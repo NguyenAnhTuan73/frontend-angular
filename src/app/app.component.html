@@ -1,16 +1,10 @@
 <div class="container">
-  <header class="row">
-    <div class="col">
-      <h1>Product Detail</h1>
-    </div>
-  </header>
+  <header class="row">Header</header>
+  <nav class="row">Menu</nav>
   <section class="row">
     <div class="col">
-      <p>Name: {{product.name}}</p>
-      <p>Quantity: {{product.quantity}}</p>
-      <p>Price: {{product.price}}</p>
-      <button class="btn btn-primary">Click</button>
+      <app-product-list></app-product-list>
+      <app-product-detail></app-product-detail>
     </div>
   </section>
-  <app-product-list></app-product-list>
 </div>

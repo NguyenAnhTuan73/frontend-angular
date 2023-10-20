@@ -8,6 +8,9 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { FormsModule } from '@angular/forms';
 import { StarComponent } from './components/star/star.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { AuthorsComponent } from './components/authors/authors.component';
+import { AuthorsDetailsComponent } from './components/authors-details/authors-details.component';
+import { AuthorListComponent } from './components/author-list/author-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     ProductListComponent,
     ProductDetailComponent,
     StarComponent,
+    AuthorsComponent,
+    AuthorsDetailsComponent,
+    AuthorListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
 

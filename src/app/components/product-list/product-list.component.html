@@ -14,12 +14,7 @@
         <tr *ngFor="let product of products">
           <td>{{ product.code }}</td>
           <td>{{ product.name }}</td>
-          <td>
-            <app-star
-              [rating]="45"
-              (ratingClicked)="changeStarRating($event)"
-            ></app-star>
-          </td>
+          <td></td>
           <td>View Edit Delete</td>
         </tr>
       </tbody>

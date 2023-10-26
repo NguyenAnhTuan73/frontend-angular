@@ -1,8 +1,67 @@
 <div class="container">
-  <header class="row">Header</header>
-  <nav class="row">Menu</nav>
-  <section class="row">
-    <div class="col"></div>
-    <app-author-list></app-author-list>
-  </section>
+  <header class="bg-info"></header>
+  <nav class="bg-warning">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" routerLink="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/product">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/register">Register</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+  </nav>
+
+  <main>
+    <article class="col-md-9 bg-light">
+      <router-outlet></router-outlet>
+    </article>
+    <aside class="col-md-3 bg-secondary">
+      <app-login></app-login>
+      <hr />
+      <app-cart [total]="numberBook" [totalPrice]="1000000"></app-cart>
+      <p>Họ tên: {{ students.name }}</p>
+      <p>Tuổi : {{ tinhTuoi() }}</p>
+      <p>Tên Sách: {{ nameBook }}</p>
+    </aside>
+  </main>
+
+  <footer class="bg-dark text-white text-center">Footer</footer>
 </div>

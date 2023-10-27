@@ -14,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TheBestSellProductComponent } from './the-best-sell-product/the-best-sell-product.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     NotfoundComponent,
     CartComponent,
+    TheBestSellProductComponent,
   ],
   imports: [
     BrowserModule,

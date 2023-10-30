@@ -7,19 +7,29 @@ import { CartService } from '../cart.service';
   styleUrls: ['./payment.component.scss'],
 })
 export class PaymentComponent {
-  constructor(private cartservice: CartService) {}
+  constructor(private cartservice: CartService) { }
   hoten: string = '';
   email: string = '';
   diachi: string = '';
   dienthoai: string = '';
 
-  // taodonhang() {
-  //   this.cartservice
-  //     .createOrder(this.hoten, this.diachi, this.dienthoai, this.email)
-  //     .subscribe((response) => {
-  //       console.log(response);
-  //       console.log(response.body); //trong body có biến id của order mới chèn
-  //       console.log(response.ok); //biến od=k =true là request ok
-  //     });
-  // } //taodonhang
+  taodonhang() {
+    this.cartservice.taoDonHang(this.hoten, this.diachi, this.dienthoai, this.email).subscribe(
+      response => {
+        console.log(response);
+        console.log(response.body); //trong body có biến id của order mới chèn
+        console.log(response.ok); //biến od=k =true là request ok
+        //lấy id của đơn hàng mới + lưu các sản phẩm trong cart lên server
+        if (response.ok == false) {
+          alert(response.statusText); //hiện lỗi
+        } else {
+          let body: any = response.body; let idDH: number = Number(body.id);
+          this.cartservice.items.forEach(
+            item => this.cartservice.luuChiTietDonhang(idDH, item).subscribe(res => console.log(res))
+          )
+        }//else
+        location.href = "/";
+      }
+    );
+  }//taodonhang
 }

@@ -1,7 +1,9 @@
-<div class="alert alert-warning text-center p-5 h2" *ngIf="items.length == 0">
+<div class="alert alert-warning text-center p-5 h2"
+  *ngIf="items.length == 0">
   Bạn chưa chọn sản phẩm nào
 </div>
-<table id="cart" class="table table-bordered" *ngIf="items.length > 0">
+<table id="cart" class="table table-bordered"
+  *ngIf="items.length > 0">
   <caption align="top" class="h3">
     GIỎ HÀNG CỦA BẠN
   </caption>
@@ -16,26 +18,25 @@
     <td>{{ item.tensp | uppercase }}</td>
     <td>{{ item.giasp | number : "1.0-0" : "fr" }} VNĐ</td>
     <td>
-      <input
-        [(ngModel)]="item.soluong"
-        min="1"
-        type="number"
-        class="form-control"
-      />
+      <input [(ngModel)]="item.soluong" min="1"
+        type="number" class="form-control" />
     </td>
-    <td>{{ item.giasp * item.soluong | number : "1.0-0" : "fr" }} VNĐ</td>
+    <td>{{ item.giasp * item.soluong | number : "1.0-0" :
+      "fr" }} VNĐ</td>
     <td><button class="btn btn-danger">Delete</button></td>
   </tr>
   <tr>
     <th colspan="2">Tổng số lượng: {{ tongsoluong() }}</th>
     <th colspan="2">
-      Tổng tiền: {{ tongtien() | number : "1.0-0" : "fr" }} VNĐ
+      Tổng tiền: {{ tongtien() | number : "1.0-0" : "fr" }}
+      VNĐ
     </th>
   </tr>
   <tr>
     <td colspan="2"></td>
     <td colspan="2">
-      <a class="btn btn-warning w-100" href="#">Thanh toán</a>
+      <a class="btn btn-warning w-100" href="#"
+        routerLink="/payment">Thanh toán đơn hàng</a>
     </td>
   </tr>
 </table>

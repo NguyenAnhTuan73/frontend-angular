@@ -15,6 +15,13 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TheBestSellProductComponent } from './the-best-sell-product/the-best-sell-product.component';
+import { NewProductComponent } from './new-product/new-product.component';
+import { TypeProductComponent } from './type-product/type-product.component';
+import { ProductsByTypeComponent } from './products-by-type/products-by-type.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ProductDetailsItemComponent } from './product-details-item/product-details-item.component';
+import { RealatedProductsComponent } from './realated-products/realated-products.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +35,12 @@ import { TheBestSellProductComponent } from './the-best-sell-product/the-best-se
     NotfoundComponent,
     CartComponent,
     TheBestSellProductComponent,
+    NewProductComponent,
+    TypeProductComponent,
+    ProductsByTypeComponent,
+    ProductDetailsItemComponent,
+    RealatedProductsComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +48,7 @@ import { TheBestSellProductComponent } from './the-best-sell-product/the-best-se
     NgbModule,
     FormsModule,
     HttpClientModule,
+    NgxPaginationModule,
   ],
 
   providers: [],

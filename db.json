@@ -144,12 +144,21 @@
       "idLoai": "2"
     }
   ],
-  "loaisp": [
+  "typeProducts": [
     { "id": 1, "tenLoai": "Điện thoại di động", "soSP": 190 },
     { "id": 2, "tenLoai": "Laptop", "soSP": 178 },
     { "id": 3, "tenLoai": "Đồng hồ đeo tay", "soSP": 143 },
     { "id": 4, "tenLoai": "Gia dụng", "soSP": 781 },
     { "id": 5, "tenLoai": "Đồ điện", "soSP": 351 }
   ],
-  "profile": { "name": "typicode" }
+  "profile": { "name": "typicode" },
+  "donhang": [
+    {
+      "name": "Nguyễn Anh Tuấn",
+      "address": "264 Xô Viết Nghệ Tĩnh - Khuê Trung - Cẩm Lệ - Đà Nẵng",
+      "phone": "0896-62-77-27",
+      "email": "nguyentuanqb73@gmail.com",
+      "id": 1
+    }
+  ]
 }

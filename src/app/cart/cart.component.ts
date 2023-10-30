@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -6,6 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent {
-  @Input() total: number = 11;
-  @Input() totalPrice: number = 0;
+  constructor(private cartservice: CartService) {}
+  items = this.cartservice.getItems();
+  tongtien() {
+    let tt: number = 0;
+    this.items.forEach((item) => (tt += item.soluong * item.giasp));
+    return tt;
+  }
+  tongsoluong() {
+    let tsl: number = 0;
+    this.items.forEach((item) => (tsl += item.soluong));
+    return tsl;
+  }
 }

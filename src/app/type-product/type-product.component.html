@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <li class="list-group-item py-2" *ngFor="let loai of listTypeProducts">
+    <a href="type/{{ loai?.id }}"> {{ loai.tenLoai | uppercase }}</a>
+  </li>
+</ul>

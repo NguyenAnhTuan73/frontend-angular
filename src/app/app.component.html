@@ -27,6 +27,9 @@
               <a class="nav-link" href="#" routerLink="/contact">Contact</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/cart">Cart</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#" routerLink="/login">Login</a>
             </li>
             <li class="nav-item">
@@ -54,12 +57,7 @@
       <router-outlet></router-outlet>
     </article>
     <aside class="col-md-3 bg-secondary">
-      <app-login></app-login>
-      <hr />
-      <app-cart [total]="numberBook" [totalPrice]="1000000"></app-cart>
-      <p>Họ tên: {{ students.name }}</p>
-      <p>Tuổi : {{ tinhTuoi() }}</p>
-      <p>Tên Sách: {{ nameBook }}</p>
+      <app-type-product></app-type-product>
     </aside>
   </main>
 

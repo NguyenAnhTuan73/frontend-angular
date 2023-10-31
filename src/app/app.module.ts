@@ -22,6 +22,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductDetailsItemComponent } from './product-details-item/product-details-item.component';
 import { RealatedProductsComponent } from './realated-products/realated-products.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { DownLoadComponent } from './down-load/down-load.component';
+import { Moment } from 'moment';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,8 @@ import { PaymentComponent } from './payment/payment.component';
     ProductDetailsItemComponent,
     RealatedProductsComponent,
     PaymentComponent,
+    ChangePasswordComponent,
+    DownLoadComponent,
   ],
   imports: [
     BrowserModule,

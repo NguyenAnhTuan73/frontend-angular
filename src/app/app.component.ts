@@ -3,6 +3,8 @@ import { Product } from './common/product';
 import { Inventor } from './common/inventor';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 registerLocaleData(localeFr, 'fr');
 
 @Component({
@@ -12,7 +14,7 @@ registerLocaleData(localeFr, 'fr');
 })
 export class AppComponent implements OnInit {
   [x: string]: any;
-  constructor() {}
+  constructor(private auth: AuthService, private router: Router) {}
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -29,5 +31,13 @@ export class AppComponent implements OnInit {
     //định nghĩa 1 hàm
     let ns: Date = new Date(this.students.birth);
     return new Date().getFullYear() - ns.getFullYear();
+  }
+
+  daDangNhap() {
+    return this.auth.daDangNhap();
+  }
+  thoat() {
+    this.auth.thoat();
+    this.router.navigateByUrl('/login');
   }
 }

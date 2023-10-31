@@ -30,6 +30,14 @@
               <a class="nav-link" href="#" routerLink="/cart">Cart</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/download">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/change-password"
+                >Change Password</a
+              >
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#" routerLink="/login">Login</a>
             </li>
             <li class="nav-item">
@@ -52,12 +60,16 @@
     </nav>
   </nav>
 
-  <main>
+  <main class="d-flex" style="min-height: 400px">
     <article class="col-md-9 bg-light">
       <router-outlet></router-outlet>
     </article>
     <aside class="col-md-3 bg-secondary">
       <app-type-product></app-type-product>
+      <div>
+        <a href="" (click)="thoat()">Thoát</a>
+      </div>
+      <p class="text-white">Tình trạng đăng nhập : {{ daDangNhap() }}</p>
     </aside>
   </main>
 

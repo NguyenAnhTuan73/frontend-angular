@@ -11,20 +11,39 @@ import { ProductDetailsItemComponent } from './product-details-item/product-deta
 import { PaymentComponent } from './payment/payment.component';
 import { CartComponent } from './cart/cart.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { securityGuard } from './security.guard';
+import { DownLoadComponent } from './down-load/down-load.component';
+import { adminSecurityGuard } from './admin-security.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
 
-  { path: 'product', component: ListProductComponent },
+  {
+    path: 'product',
+    component: ListProductComponent,
+    canActivate: [adminSecurityGuard],
+  },
   { path: 'product/:id', component: DetailsProductComponent },
   { path: 'type/:id', component: ProductsByTypeComponent },
   { path: 'sp/:id', component: ProductDetailsItemComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  {
+    path: 'download',
+    component: DownLoadComponent,
+    canActivate: [securityGuard],
+  },
   { path: 'payment', component: PaymentComponent },
   { path: 'cart', component: CartComponent },
+  {
+    path: 'change-password',
+    component: ChangePasswordComponent,
+    canActivate: [securityGuard],
+  },
+
   { path: '**', component: NotfoundComponent },
 ];
 
